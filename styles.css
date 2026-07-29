@@ -93,6 +93,10 @@ p {
 }
 
 
+.container h2{
+    margin-bottom: 15px;
+}
+
 
 
 
@@ -458,7 +462,7 @@ nav a:hover {
 
     padding:90px 0;
 
-    background:var(--graphite);
+    background:var(--black);
 
 }
 
@@ -935,6 +939,14 @@ footer p {
 @media(max-width:900px){
 
 
+    .portfolio-grid,
+    .project-types-grid,
+    .pricing-grid,
+    .services-list-grid,
+    .services-advanced-grid {
+        grid-template-columns: 1fr;
+    }
+
     .grid-2 {
 
         grid-template-columns:1fr;
@@ -959,13 +971,6 @@ footer p {
     .numbers-grid {
 
         grid-template-columns:1fr 1fr;
-
-    }
-
-
-    nav {
-
-        display:none;
 
     }
 
@@ -1746,4 +1751,182 @@ footer p {
 .grid-list li {
     margin-bottom: 8px;
     font-size: 0.9rem;
+}
+
+
+/* ================= MENU HAMBURGER ================= */
+.hamburger {
+    display: none; /* Escondido no computador */
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001; /* Fica acima do menu aberto */
+}
+
+.hamburger span {
+    display: block;
+    width: 32px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 3px;
+    transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
+}
+
+@media(max-width: 900px) {
+    /* Mostra o botão no celular */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Estiliza a tela do menu no celular */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Começa escondido fora da tela */
+        width: 100%;
+        height: 100vh;
+        background: rgba(18, 18, 18, 0.98);
+        backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* Espaçamento entre os links */
+        transition: right 0.4s ease-in-out;
+        z-index: 1000;
+    }
+
+    /* Classe que será adicionada pelo JavaScript para abrir o menu */
+    nav.active {
+        right: 0; 
+    }
+
+    /* Aumenta os links para facilitar o toque */
+    nav a {
+        font-size: 1.8rem;
+    }
+
+    /* Animação do botão virando um "X" */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+        background-color: var(--orange);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+        background-color: var(--orange);
+    }
+}
+
+/* ================= BLOG GRID E CARDS ================= */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px 30px;
+}
+
+.blog-card {
+    background: var(--white);
+    border: 1px solid var(--concrete);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.blog-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.05);
+}
+
+.blog-category {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--orange);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.blog-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.blog-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.blog-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.blog-content h3 a {
+    color: var(--black);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-content h3 a:hover {
+    color: var(--orange);
+}
+
+.blog-content p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 25px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Corta o texto após 3 linhas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.blog-read-more {
+    margin-top: auto;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--orange);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.blog-read-more:hover {
+    color: var(--orange-dark);
 }

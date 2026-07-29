@@ -144,3 +144,24 @@ function changeImage(mainImageId, newSource) {
         mainImage.style.opacity = 1;
     }, 150); // Troca a foto em 150 milissegundos
 }
+
+// ================= MENU HAMBURGER (MOBILE) =================
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+const navLinks = document.querySelectorAll('#nav-menu a');
+
+if (hamburger) {
+    // Abre e fecha o menu ao clicar no botão
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Fecha o menu automaticamente quando o usuário clica em um link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+}

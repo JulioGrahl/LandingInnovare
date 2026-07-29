@@ -1320,3 +1320,430 @@ footer p {
     }
 
 }
+
+
+
+/* ================= INTERNAL HERO (Páginas Internas) ================= */
+.internal-hero {
+    background: #090909;
+    padding: 180px 0 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.internal-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 15px;
+}
+
+.internal-hero p {
+    color: #cfcfcf;
+    font-size: 1.2rem;
+}
+
+/* ================= ABOUT PAGE TEXT & SOCIALS ================= */
+.about-page .image-placeholder {
+    height: 600px; /* Um pouco maior para acomodar melhor a foto vertical */
+}
+
+.social-links {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--concrete);
+}
+
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--cement);
+    color: var(--black);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 1px solid #ccc;
+}
+
+.social-btn:hover {
+    background: var(--orange);
+    color: white;
+    border-color: var(--orange);
+    transform: translateY(-2px);
+}
+
+/* ================= AJUSTES DA PÁGINA SOBRE ================= */
+.orange-subtitle {
+    font-size: 1.2rem;
+    color: var(--orange);
+    margin: 25px 0 10px;
+}
+
+.bg-cement {
+    background: var(--cement);
+}
+
+/* Inversão do layout: Imagem na direita e Texto na esquerda (Apenas no Computador) */
+@media (min-width: 901px) {
+    .grid-reverse div:first-child {
+        order: 2; /* Joga a imagem para o lado direito */
+    }
+    .grid-reverse div:last-child {
+        order: 1; /* Joga o texto para o lado esquerdo */
+    }
+}
+
+/* ================= CARDS MISSÃO, VISÃO E VALORES ================= */
+.mvv-cards .card {
+    text-align: left;
+    border-top: 4px solid var(--orange); /* Detalhe colorido no topo do card */
+    position: relative;
+    padding-top: 50px;
+}
+
+.mvv-icon {
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    font-size: 2rem;
+    background: var(--cement);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%); /* Faz o ícone "pular" para fora da caixa levemente */
+    border: 3px solid white;
+}
+
+.mvv-cards h3 {
+    margin-top: 15px;
+}
+
+
+
+/* ================= SERVIÇOS: LISTA ================= */
+.services-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 4px solid var(--orange);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.service-item strong {
+    color: var(--orange);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* ================= COMPROMISSOS (DIFERENCIAIS) ================= */
+.commitments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.commitment-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 2px solid var(--orange);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.commitment-card h3 {
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.commitment-card p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* ================= PACOTES DE PREÇOS (PRICING) ================= */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.pricing-card {
+    background: var(--white);
+    border: 1px solid var(--concrete);
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.pricing-card.highlighted {
+    border: 2px solid var(--orange);
+    box-shadow: 0 15px 40px rgba(255, 141, 65, 0.15);
+}
+
+.highlight-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--orange);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pricing-header {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--concrete);
+}
+
+.pricing-header h3 {
+    font-size: 1.8rem;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.pricing-header p {
+    font-size: 0.9rem;
+    color: #666;
+    min-height: 45px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: var(--orange);
+}
+
+.price span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #888;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+    text-align: left;
+    flex-grow: 1; /* Faz o botão sempre ficar alinhado no rodapé */
+}
+
+.pricing-features li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.pricing-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--orange);
+    font-weight: 800;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--orange);
+    color: var(--orange);
+}
+
+.btn-outline:hover {
+    background: var(--orange);
+    color: var(--white);
+}
+
+/* ================= OBSERVAÇÕES DOS PACOTES ================= */
+.pricing-notes {
+    background: var(--cement);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid var(--black);
+}
+
+.pricing-notes h4 {
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pricing-notes ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.pricing-notes li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+
+/* ================= SERVIÇOS: CARDS AVANÇADOS ================= */
+.services-advanced-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-adv-card {
+    background: var(--white);
+    padding: 35px 30px;
+    border-radius: 8px;
+    border: 1px solid var(--concrete);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.service-adv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: var(--orange-light);
+}
+
+.service-icon {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    background: var(--cement);
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    transition: 0.3s;
+}
+
+.service-adv-card:hover .service-icon {
+    background: var(--orange);
+    color: white;
+    border-color: var(--orange);
+}
+
+.service-adv-card h3 {
+    font-size: 1.25rem;
+    color: var(--black);
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.service-adv-card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* ================= SHOWCASE DE PROJETOS ================= */
+.project-showcase {
+    padding: 90px 0;
+}
+
+.project-info h2 {
+    font-size: 2.2rem;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.project-info p {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* ================= GALERIA DE FOTOS INTERATIVA ================= */
+.project-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: opacity 0.3s ease;
+}
+
+.thumb-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.thumb-grid img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.thumb-grid img:hover {
+    opacity: 1;
+    border-color: var(--orange);
+    transform: translateY(-2px);
+}
+
+/* ================= LISTA EM GRID (Para os cômodos) ================= */
+.grid-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px 20px;
+}
+
+.grid-list li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}

@@ -130,3 +130,17 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
   }
 });
+
+
+// ================= GALERIA DE PORTFÓLIO =================
+function changeImage(mainImageId, newSource) {
+    const mainImage = document.getElementById(mainImageId);
+    
+    // Pequeno efeito de piscar suave na troca
+    mainImage.style.opacity = 0;
+    
+    setTimeout(() => {
+        mainImage.src = newSource;
+        mainImage.style.opacity = 1;
+    }, 150); // Troca a foto em 150 milissegundos
+}

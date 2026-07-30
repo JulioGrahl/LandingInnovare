@@ -1,0 +1,2448 @@
+:root {
+
+    --orange: #ff8d41;
+
+    --black: #121212;
+
+    --graphite: #333333;
+
+    --concrete: #e5e5e5;
+
+    --cement: #f2f2f0;
+
+    --white: #ffffff;
+
+    --text-dark: #333333;
+
+    --text-light: #b5b5b5;
+
+    --orange: #ff8d41;
+
+    --orange-light: #ffb276;
+
+    --orange-dark: #c85f20;
+
+    --blueprint: #ff8d41;
+
+}
+
+
+
+* {
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body {
+
+    font-family:'Inter', sans-serif;
+
+    color:var(--text-dark);
+
+    background:var(--white);
+
+    line-height:1.6;
+
+}
+
+
+
+h1,
+h2,
+h3 {
+
+    font-family:'Montserrat', sans-serif;
+
+}
+
+
+
+p {
+
+    margin-bottom:20px;
+
+    color:#666;
+
+}
+
+
+
+.container {
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+.container h2{
+    margin-bottom: 15px;
+}
+
+
+
+
+/* ================= HEADER ================= */
+
+
+.header {
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(18,18,18,.85);
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+
+.header-content {
+
+    height:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+
+.logo img {
+
+    max-width:170px;
+    margin-bottom: -10px;
+
+}
+
+
+
+nav {
+
+    display:flex;
+
+    gap:35px;
+
+
+
+}
+
+
+
+nav a {
+
+    color:white;
+
+    font-size: 1.1rem;
+
+    transition:.3s;
+
+    text-decoration: none;
+
+}
+
+
+
+nav a:hover {
+
+    color:var(--orange);
+
+}
+
+
+
+
+
+/* ================= HERO ================= */
+
+
+.hero {
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#090909;
+
+    isolation:isolate;
+
+    padding-top: 120px; /* Compensa os 90px do header + um espaço extra */
+    padding-bottom: 60px; /* Garante que o botão nunca cole no final da tela */
+
+}
+
+
+
+.hero-content {
+
+    color:white;
+
+    max-width:850px;
+
+}
+
+
+
+.tag {
+
+    color:var(--orange);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.8rem;
+
+    font-weight:800;
+
+}
+
+
+
+.hero h1 {
+
+    font-size:clamp(3.5rem,6vw,5.5rem);
+
+    line-height:1;
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+    margin:25px 0;
+
+}
+
+
+
+.hero p {
+
+    color:#cfcfcf;
+
+    font-size:1.2rem;
+
+    max-width:650px;
+
+}
+
+
+
+.hero-checks {
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin:35px 0;
+
+}
+
+
+
+.hero-checks span {
+
+    color:#ddd;
+
+    font-size:.9rem;
+
+}
+
+
+
+
+
+/* ================= BOTÃO ================= */
+
+
+.btn {
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    background:var(--orange);
+
+    color:#111;
+
+    font-weight:700;
+
+    border-radius:4px;
+
+    transition:.3s;
+
+    text-decoration: none;
+
+}
+
+
+
+.btn:hover {
+
+    transform:translateY(-3px);
+
+    opacity:.9;
+
+}
+
+
+
+
+
+/* ================= TITULOS ================= */
+
+
+.section {
+
+    padding:110px 0;
+
+}
+
+
+
+.section-tag {
+
+    color:var(--orange);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.75rem;
+
+    font-weight:800;
+
+    display:block;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.section-tag::after {
+
+    content:"";
+
+    display:inline-block;
+
+    width:45px;
+
+    height:2px;
+
+    background:var(--orange);
+
+    margin-left:15px;
+
+    vertical-align:middle;
+
+}
+
+
+
+.section-title {
+
+    font-size:clamp(2.5rem,4vw,3.5rem);
+
+    line-height:1.1;
+
+    font-weight:800;
+
+    letter-spacing:-1px;
+
+    max-width:850px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.light-title {
+
+    color:#222;
+
+}
+
+
+
+.dark-title {
+
+    color:white;
+
+}
+
+
+
+
+
+/* ================= SOBRE ================= */
+
+
+.about {
+
+    background:var(--cement);
+
+}
+
+
+
+.grid-2 {
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+
+
+.image-placeholder {
+    height: 500px;
+    background: var(--cement); /* Mantém uma cor de fundo caso a internet demore a carregar a foto */
+    border-radius: 8px; /* Dá um toque mais suave e moderno nas bordas */
+    overflow: hidden; /* Garante que a foto não vaze das bordas arredondadas */
+    
+    /* Removemos o display flex e o texto, pois agora teremos a imagem */
+}
+
+/* Criamos esta nova regra especificamente para a imagem dentro do placeholder */
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preenche o espaço de 500px sem amassar a foto */
+    object-position: center top; /* Garante que o rosto não seja cortado se a foto for redimensionada */
+}
+
+
+
+
+
+/* ================= NUMEROS ================= */
+
+
+.numbers {
+
+    padding:90px 0;
+
+    background:var(--black);
+
+}
+
+
+
+.numbers-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    text-align:center;
+
+}
+
+
+
+.numbers strong {
+
+    display:block;
+
+    color:var(--orange);
+
+    font-size:3rem;
+
+    font-family:'Montserrat';
+
+    font-weight:800;
+
+}
+
+
+
+.numbers span {
+
+    color:#ddd;
+
+}
+
+
+
+
+
+/* ================= METODOLOGIA ================= */
+
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+
+
+.step {
+
+    padding:35px;
+
+    background:white;
+
+    border-left:3px solid var(--orange);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+}
+
+
+
+.step strong {
+
+    color:var(--orange);
+
+    font-size:2.2rem;
+
+}
+
+
+
+
+
+/* ================= SERVICOS ================= */
+
+
+.dark-section {
+
+    background:#1d1d1d;
+
+    color:white;
+
+}
+
+
+
+.dark-section p {
+
+    color:#aaa;
+
+}
+
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+
+
+.card {
+
+    background:white;
+
+    padding:35px;
+
+    border:1px solid #858585;
+
+    transition:.3s;
+
+}
+
+
+
+.dark-section .card {
+
+    background:#292929;
+
+    border-color:var(--blueprint);
+
+}
+
+
+
+.card:hover {
+
+    transform:translateY(-8px);
+
+    border-color:var(--orange);
+
+    box-shadow: 5px 5px 15px var(--orange);
+
+}
+
+
+
+.card h3 {
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+    color:#222;
+
+}
+
+
+
+.dark-section .card h3 {
+
+    color:white;
+
+}
+
+
+
+
+
+/* ================= PORTFOLIO ================= */
+
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+
+
+.project {
+
+    height:400px;
+
+    background:#333;
+
+    display:flex;
+
+    align-items:end;
+
+    padding:30px;
+
+    color:white;
+
+}
+
+
+
+.project h3 {
+
+    font-size:1.6rem;
+
+    color:white;
+
+    margin-bottom:5px;
+
+}
+
+
+
+.project p {
+
+    color:#ddd;
+
+    font-size:.95rem;
+
+}
+
+
+/* ================= PORTFOLIO ================= */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: flex-end; /* Mantém o texto na base */
+    padding: 30px;
+    color: white;
+    overflow: hidden; /* Corta qualquer coisa que vaze da div */
+    border-radius: 4px; /* Opcional: arredonda levemente as pontas */
+}
+
+/* Configuração da Imagem */
+.project img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* A mágica: preenche a div inteira sem distorcer a foto */
+    z-index: 1;
+    transition: transform 0.6s ease; /* Prepara o efeito de hover */
+}
+
+/* Degradê escuro para o texto não sumir em fotos claras */
+.project::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0, 0.9) 0%, rgba(0,0,0, 0) 60%);
+    z-index: 2;
+}
+
+/* Coloca o texto acima da imagem e do degradê */
+.project .project-content {
+    position: relative;
+    z-index: 3;
+}
+
+.project h3 {
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.project p {
+    color: #ddd;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Efeito Premium: Zoom na foto ao passar o mouse */
+.project:hover img {
+    transform: scale(1.08);
+}
+
+
+/* ================= TIPOS DE PROJETOS ================= */
+.project-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.type-card {
+    background: var(--white);
+    padding: 45px 40px;
+    border-radius: 8px;
+    border-top: 5px solid var(--orange);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.type-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.type-card h3 {
+    font-size: 1.8rem;
+    color: var(--black);
+    margin-bottom: 15px;
+}
+
+.type-card p {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+.type-features {
+    list-style: none;
+    padding: 0;
+}
+
+.type-features li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Cria o "check" laranja antes de cada item da lista */
+.type-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--orange);
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+
+/* ================= FAQ ================= */
+
+
+.faq {
+
+    display:grid;
+
+    gap:20px;
+
+}
+
+
+
+
+
+/* ================= CTA ================= */
+
+
+.cta {
+
+    padding:120px 0;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.85)
+    ),
+
+    url("assets/cta-bg.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+
+.cta h2 {
+
+    color:white;
+
+    font-size:clamp(2.5rem,4vw,3.5rem);
+
+}
+
+
+
+.cta p {
+
+    color:#ddd;
+
+    max-width:700px;
+
+    margin:0 auto 35px;
+
+}
+
+
+.cta-benefits{
+    color: white;
+    margin-bottom: 30px;
+}
+
+
+
+/* ================= FOOTER ================= */
+
+
+footer {
+
+    background:#111;
+
+    padding:35px 0;
+
+    text-align:center;
+
+}
+
+
+
+footer p {
+
+    color:#aaa;
+
+}
+
+
+
+
+
+/* ================= ANIMAÇÕES ================= */
+
+
+.hidden {
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:.8s;
+
+}
+
+
+
+.show {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+
+
+/* ================= RESPONSIVO ================= */
+
+
+@media(max-width:900px){
+
+
+    .portfolio-grid,
+    .project-types-grid,
+    .pricing-grid,
+    .services-list-grid,
+    .services-advanced-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-2 {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .steps {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .numbers-grid {
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+
+}
+
+
+
+@media(max-width:500px){
+
+
+    .numbers-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:2.8rem;
+
+    }
+
+
+}
+
+.technical-bg {
+
+    position:absolute;
+
+    left:55%;
+
+    top:55%;
+
+    width:850px;
+
+    height:750px;
+
+    transform:translate(120px,-50%);
+
+    opacity:.50;
+
+    z-index:1;
+
+    animation:floatTech 5s ease-in-out infinite;
+
+    overflow:hidden;
+
+}
+
+
+
+.tech-box {
+
+    position:absolute;
+
+    border:1px solid var(--orange);
+    
+
+}
+
+
+
+.tech-box span {
+
+    position:absolute;
+
+    background:var(--orange);
+
+}
+
+
+.hero::before {
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    right:100px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,141,65,.15),
+        transparent 70%
+    );
+
+    z-index:0;
+
+}
+
+
+
+.box1 {
+
+    width:350px;
+
+    height:220px;
+
+    top:100px;
+
+    left:100px;
+
+    transform:perspective(500px) rotateY(-20deg);
+
+}
+
+
+
+.box1 span:nth-child(1){
+
+    width:100%;
+
+    height:1px;
+
+    top:50%;
+
+}
+
+
+
+.box1 span:nth-child(2){
+
+    height:100%;
+
+    width:1px;
+
+    left:50%;
+
+}
+
+
+
+.box1 span:nth-child(3){
+
+    width:80px;
+
+    height:80px;
+
+    border:1px solid var(--orange);
+
+    background:none;
+
+    right:30px;
+
+    bottom:30px;
+
+}
+
+
+
+
+
+
+.box2 {
+
+    width:280px;
+
+    height:180px;
+
+    right:80px;
+
+    bottom:130px;
+
+    transform:rotate(18deg);
+
+}
+
+
+
+.box2 span:nth-child(1){
+
+    width:100%;
+
+    height:1px;
+
+    top:40px;
+
+}
+
+
+
+.box2 span:nth-child(2){
+
+    width:1px;
+
+    height:100%;
+
+    left:100px;
+
+}
+
+
+
+.box2 span:nth-child(3){
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    border:1px solid var(--orange);
+
+    background:none;
+
+}
+
+
+
+
+
+.tech-circle {
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    border-radius:50%;
+
+    border:1px dashed var(--orange);
+
+    right:200px;
+
+    top:180px;
+
+}
+
+
+
+.tech-circle::after {
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+
+    height:1px;
+
+    background:var(--orange);
+
+    top:50%;
+
+}
+
+
+
+
+
+.tech-lines div {
+
+    position:absolute;
+
+    height:1px;
+
+    background:var(--orange);
+
+}
+
+
+
+.tech-lines div:nth-child(1){
+
+    width:500px;
+
+    top:350px;
+
+    left:0;
+
+    transform:rotate(-30deg);
+
+}
+
+
+.tech-lines div:nth-child(2){
+
+    width:300px;
+
+    top:500px;
+
+    left:250px;
+
+}
+
+
+.tech-lines div:nth-child(3){
+
+    width:1px;
+
+    height:500px;
+
+    left:450px;
+
+}
+
+
+
+
+
+.tech-text {
+
+    position:absolute;
+
+    right:200px;
+
+    top:80px;
+
+    color:var(--orange);
+
+    font-family:monospace;
+
+    font-size:.65rem;
+
+    letter-spacing:4px;
+
+}
+
+
+
+@keyframes floatTech {
+
+    0% {
+
+        transform:translateY(-50%);
+
+    }
+
+
+    50% {
+
+        transform:translateY(calc(-50% - 18px));
+
+    }
+
+
+    100% {
+
+        transform:translateY(-50%);
+
+    }
+
+}
+
+
+
+/* ================= INTERNAL HERO (Páginas Internas) ================= */
+.internal-hero {
+    background: #090909;
+    padding: 180px 0 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.internal-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 15px;
+}
+
+.internal-hero p {
+    color: #cfcfcf;
+    font-size: 1.2rem;
+}
+
+/* ================= ABOUT PAGE TEXT & SOCIALS ================= */
+.about-page .image-placeholder {
+    height: 600px; /* Um pouco maior para acomodar melhor a foto vertical */
+}
+
+.social-links {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--concrete);
+}
+
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--cement);
+    color: var(--black);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 1px solid #ccc;
+}
+
+.social-btn:hover {
+    background: var(--orange);
+    color: white;
+    border-color: var(--orange);
+    transform: translateY(-2px);
+}
+
+/* ================= AJUSTES DA PÁGINA SOBRE ================= */
+.orange-subtitle {
+    font-size: 1.2rem;
+    color: var(--orange);
+    margin: 25px 0 10px;
+}
+
+.bg-cement {
+    background: var(--cement);
+}
+
+/* Inversão do layout: Imagem na direita e Texto na esquerda (Apenas no Computador) */
+@media (min-width: 901px) {
+    .grid-reverse div:first-child {
+        order: 2; /* Joga a imagem para o lado direito */
+    }
+    .grid-reverse div:last-child {
+        order: 1; /* Joga o texto para o lado esquerdo */
+    }
+}
+
+/* ================= CARDS MISSÃO, VISÃO E VALORES ================= */
+.mvv-cards .card {
+    text-align: left;
+    border-top: 4px solid var(--orange); /* Detalhe colorido no topo do card */
+    position: relative;
+    padding-top: 50px;
+}
+
+.mvv-icon {
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    font-size: 2rem;
+    background: var(--cement);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%); /* Faz o ícone "pular" para fora da caixa levemente */
+    border: 3px solid white;
+}
+
+.mvv-cards h3 {
+    margin-top: 15px;
+}
+
+
+
+/* ================= SERVIÇOS: LISTA ================= */
+.services-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 4px solid var(--orange);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.service-item strong {
+    color: var(--orange);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* ================= COMPROMISSOS (DIFERENCIAIS) ================= */
+.commitments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.commitment-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 2px solid var(--orange);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.commitment-card h3 {
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.commitment-card p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* ================= PACOTES DE PREÇOS (PRICING) ================= */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.pricing-card {
+    background: var(--white);
+    border: 1px solid var(--concrete);
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.pricing-card.highlighted {
+    border: 2px solid var(--orange);
+    box-shadow: 0 15px 40px rgba(255, 141, 65, 0.15);
+}
+
+.highlight-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--orange);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pricing-header {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--concrete);
+}
+
+.pricing-header h3 {
+    font-size: 1.8rem;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.pricing-header p {
+    font-size: 0.9rem;
+    color: #666;
+    min-height: 45px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: var(--orange);
+}
+
+.price span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #888;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+    text-align: left;
+    flex-grow: 1; /* Faz o botão sempre ficar alinhado no rodapé */
+}
+
+.pricing-features li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.pricing-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--orange);
+    font-weight: 800;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--orange);
+    color: var(--orange);
+}
+
+.btn-outline:hover {
+    background: var(--orange);
+    color: var(--white);
+}
+
+/* ================= OBSERVAÇÕES DOS PACOTES ================= */
+.pricing-notes {
+    background: var(--cement);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid var(--black);
+}
+
+.pricing-notes h4 {
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pricing-notes ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.pricing-notes li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+
+/* ================= SERVIÇOS: CARDS AVANÇADOS ================= */
+.services-advanced-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-adv-card {
+    background: var(--white);
+    padding: 35px 30px;
+    border-radius: 8px;
+    border: 1px solid var(--concrete);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.service-adv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: var(--orange-light);
+}
+
+.service-icon {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    background: var(--cement);
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    transition: 0.3s;
+}
+
+.service-adv-card:hover .service-icon {
+    background: var(--orange);
+    color: white;
+    border-color: var(--orange);
+}
+
+.service-adv-card h3 {
+    font-size: 1.25rem;
+    color: var(--black);
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.service-adv-card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* ================= SHOWCASE DE PROJETOS ================= */
+.project-showcase {
+    padding: 90px 0;
+}
+
+.project-info h2 {
+    font-size: 2.2rem;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.project-info p {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* ================= GALERIA DE FOTOS INTERATIVA ================= */
+.project-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: opacity 0.3s ease;
+}
+
+.thumb-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.thumb-grid img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.thumb-grid img:hover {
+    opacity: 1;
+    border-color: var(--orange);
+    transform: translateY(-2px);
+}
+
+/* ================= LISTA EM GRID (Para os cômodos) ================= */
+.grid-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px 20px;
+}
+
+.grid-list li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+
+/* ================= MENU HAMBURGER ================= */
+.hamburger {
+    display: none; /* Escondido no computador */
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001; /* Fica acima do menu aberto */
+}
+
+.hamburger span {
+    display: block;
+    width: 32px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 3px;
+    transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
+}
+
+@media(max-width: 900px) {
+    /* Mostra o botão no celular */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Estiliza a tela do menu no celular */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Começa escondido fora da tela */
+        width: 100%;
+        height: 100vh;
+        background: rgba(18, 18, 18, 0.98);
+        backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* Espaçamento entre os links */
+        transition: right 0.4s ease-in-out;
+        z-index: 1000;
+    }
+
+    /* Classe que será adicionada pelo JavaScript para abrir o menu */
+    nav.active {
+        right: 0; 
+    }
+
+    /* Aumenta os links para facilitar o toque */
+    nav a {
+        font-size: 1.8rem;
+    }
+
+    /* Animação do botão virando um "X" */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+        background-color: var(--orange);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+        background-color: var(--orange);
+    }
+}
+
+/* ================= BLOG GRID E CARDS ================= */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px 30px;
+}
+
+.blog-card {
+    background: var(--white);
+    border: 1px solid var(--concrete);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.blog-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.05);
+}
+
+.blog-category {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--orange);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.blog-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.blog-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.blog-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.blog-content h3 a {
+    color: var(--black);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-content h3 a:hover {
+    color: var(--orange);
+}
+
+.blog-content p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 25px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Corta o texto após 3 linhas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.blog-read-more {
+    margin-top: auto;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--orange);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.blog-read-more:hover {
+    color: var(--orange-dark);
+}
+
+
+/* ================= RODAPÉ PREMIUM ================= */
+.footer-premium {
+    background: #080808; /* Um preto mais profundo e luxuoso */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 100px 0 0 0;
+    color: #999;
+    font-size: 0.95rem;
+}
+
+.footer-grid {
+    display: grid;
+    /* Ajuste fino na proporção das colunas para respirar melhor */
+    grid-template-columns: 2.5fr 1fr 1.5fr 1.5fr;
+    gap: 50px;
+    margin-bottom: 70px;
+}
+
+.brand-col p {
+    color: #888;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    max-width: 90%;
+    margin-bottom: 25px;
+}
+
+.footer-logo {
+    max-width: 170px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.footer-logo:hover {
+    opacity: 1;
+}
+
+/* Títulos das Colunas */
+.footer-col h3 {
+    color: var(--white);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Links com Animação Premium de Deslizamento */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 16px;
+}
+
+.footer-links a {
+    color: #999;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--orange);
+    transform: translateX(8px); /* Desliza o texto suavemente para a direita */
+}
+
+/* Botões Sociais Elegantes */
+.footer-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.social-pill {
+    display: inline-block;
+    padding: 8px 18px;
+    background: transparent;
+    color: #aaa;
+    border-radius: 30px; /* Formato de pílula arredondada */
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.social-pill:hover {
+    background: var(--orange);
+    color: var(--black);
+    border-color: var(--orange);
+    transform: translateY(-3px);
+}
+
+/* Contatos Destacados */
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.contact-highlight {
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--orange);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-highlight:hover {
+    color: var(--orange-light);
+}
+
+.contact-link, .contact-text {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    color: var(--white);
+}
+
+/* Linha de Copyright (Bottom) */
+.footer-bottom {
+    background: #050505;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.bottom-flex p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.bottom-flex strong {
+    color: #aaa;
+    font-weight: 600;
+}
+
+/* ================= RESPONSIVIDADE DO RODAPÉ ================= */
+@media(max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px 40px;
+    }
+}
+
+@media(max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+    
+    .brand-col p {
+        margin: 0 auto 25px;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .footer-links a:hover {
+        transform: translateX(0); /* Desativa o deslize no celular para não ficar estranho no toque */
+        color: var(--orange);
+    }
+
+    .bottom-flex {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+
+
+/* ================= PÁGINA DO POST (LEITURA E ESTRUTURA) ================= */
+.post-container {
+    width: 90%;
+    max-width: 760px; /* Medida ideal aprovada por UX para leitura sem cansar os olhos */
+    margin: 0 auto;
+}
+
+.post-header-section {
+    padding: 160px 0 40px 0;
+    text-align: center;
+}
+
+.post-header-section h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: var(--black);
+    margin: 20px 0;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.post-featured-image {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.post-content-section {
+    padding: 40px 0 80px 0;
+}
+
+/* ================= CSS DO TEXTO RICO (Tudo dentro de .post-content) ================= */
+
+/* Parágrafos Padrão */
+.post-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #3b3b3b;
+    margin-bottom: 25px;
+}
+
+/* Links no meio do texto */
+.post-content a {
+    color: var(--orange);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.post-content a:hover {
+    color: var(--orange-dark);
+    border-bottom-color: var(--orange-dark);
+}
+
+/* Títulos Intermediários (H2 e H3) */
+.post-content h2 {
+    font-size: 1.9rem;
+    color: var(--black);
+    margin: 50px 0 20px;
+    line-height: 1.3;
+}
+
+.post-content h3 {
+    font-size: 1.4rem;
+    color: var(--graphite);
+    margin: 35px 0 15px;
+    line-height: 1.4;
+}
+
+/* Listas (UL / OL) */
+.post-content ul, .post-content ol {
+    margin: 0 0 30px 20px;
+    padding-left: 20px;
+}
+
+.post-content li {
+    font-size: 1.15rem;
+    color: #3b3b3b;
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+/* Personalizando as bolinhas da lista para o Laranja da marca */
+.post-content ul li::marker {
+    color: var(--orange);
+    font-size: 1.3rem;
+}
+
+/* Bloco de Citação / Destaque */
+.post-content blockquote {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--black);
+    border-left: 5px solid var(--orange);
+    padding: 25px 35px;
+    margin: 45px 0;
+    background: #fafafa;
+    border-radius: 0 12px 12px 0;
+    line-height: 1.6;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.03);
+}
+
+/* Imagens soltas no meio do texto */
+.post-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 35px 0;
+}
+
+/* Figura (Imagem com Legenda Embaixo) */
+.post-content figure {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.post-content figure img {
+    margin: 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.post-content figcaption {
+    font-size: 0.95rem;
+    color: #777;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+
+/* ================= CAIXA DO AUTOR ================= */
+.author-section {
+    padding: 60px 0;
+    border-top: 1px solid var(--concrete);
+}
+
+.author-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    border: 1px solid var(--concrete);
+}
+
+.author-box img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--orange);
+}
+
+.author-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.author-info p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+@media(max-width: 600px) {
+    .author-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ================= TABELAS DENTRO DO BLOG ================= */
+.post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0;
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden; /* Garante que os cantos fiquem arredondados */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.post-content table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--concrete);
+    text-align: left;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+/* Estiliza a PRIMEIRA LINHA como um Cabeçalho escuro */
+.post-content table tr:first-child {
+    background: var(--black);
+}
+
+.post-content table tr:first-child td {
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border-bottom: none;
+}
+
+/* Garante que o <strong> dentro da primeira linha não fique escuro */
+.post-content table tr:first-child td strong {
+    color: var(--white);
+    font-weight: 700;
+}
+
+/* Efeito de passar o mouse nas linhas (exceto no cabeçalho) */
+.post-content table tr:not(:first-child):hover {
+    background: #fafafa;
+}
+
+/* Centraliza os "✔" nas colunas 2 e 3 e deixa eles na cor Laranja */
+.post-content table tr td:nth-child(2),
+.post-content table tr td:nth-child(3) {
+    text-align: center;
+    color: var(--orange);
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+/* Na primeira linha, o título das colunas 2 e 3 volta a ficar branco */
+.post-content table tr:first-child td:nth-child(2),
+.post-content table tr:first-child td:nth-child(3) {
+    color: var(--white);
+}
+
+/* Responsividade para não quebrar no celular */
+@media(max-width: 600px) {
+    .post-content table td {
+        padding: 12px 10px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Responsividade Avançada: Transforma a tabela em Cards no celular (Sem rolagem) */
+@media(max-width: 600px) {
+    /* Desativa o formato padrão de tabela */
+    .post-content table, 
+    .post-content tbody, 
+    .post-content tr, 
+    .post-content td {
+        display: block;
+        width: 100%;
+    }
+    
+    /* Esconde a linha original de cabeçalho (para não repetir) */
+    .post-content table tr:first-child {
+        display: none;
+    }
+    
+    /* Transforma cada linha (tr) em um Card separadinho */
+    .post-content table tr {
+        margin-bottom: 20px;
+        border: 1px solid var(--concrete);
+        border-radius: 8px;
+        background: var(--white);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    
+    /* COLUNA 1: A "Situação" vira o título escuro do Card */
+    .post-content table tr td:nth-child(1) {
+        background: var(--black);
+        color: var(--white);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        text-align: center;
+        border-radius: 8px 8px 0 0; /* Arredonda só o topo */
+        padding: 15px;
+        border-bottom: none;
+    }
+    
+    /* COLUNAS 2 e 3: Coloca os nomes na esquerda e os ✔ na direita */
+    .post-content table tr td:nth-child(2),
+    .post-content table tr td:nth-child(3) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        border-bottom: 1px solid var(--concrete);
+        text-align: right;
+        min-height: 50px;
+    }
+    
+    /* Remove a bordinha embaixo do último item do card */
+    .post-content table tr td:last-child {
+        border-bottom: none;
+    }
+    
+    /* A MÁGICA: O CSS injeta o texto "Arquiteto" e "Engenheiro" automaticamente */
+    .post-content table tr td:nth-child(2)::before {
+        content: "Arquiteto:";
+        font-weight: 600;
+        color: var(--graphite);
+        font-size: 0.95rem;
+    }
+    
+    .post-content table tr td:nth-child(3)::before {
+        content: "Engenheiro:";
+        font-weight: 600;
+        color: var(--graphite);
+        font-size: 0.95rem;
+    }
+}
